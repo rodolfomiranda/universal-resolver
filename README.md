@@ -1,24 +1,27 @@
 ![DIF Logo](https://raw.githubusercontent.com/decentralized-identity/universal-resolver/master/docs/logo-dif.png)
 
+### **Important note:**
+**This repository is a fork from [DIF Universal Resolver](https://github.com/decentralized-identity/universal-resolver). It deploys the Universal Resolver with all oficial did methods drivers plus [Sidetree-Cardano](https://github.com/rodolfomiranda/uni-resolver-driver-did-ada)  did:ada method driver that was not yet published by the Decentralized Identity Foundation.**
 # Universal Resolver
 
 The Universal Resolver resolves Decentralized Identifiers (DIDs) across many different DID methods, based on the [W3C DID Core 1.0](https://www.w3.org/TR/did-core/) and [DID Resolution](https://w3c-ccg.github.io/did-resolution/) specifications. It is a work item of the [DIF Identifiers&Discovery Working Group](https://github.com/decentralized-identity/identifiers-discovery/).
 
 See this [blog post](https://medium.com/decentralized-identity/a-universal-resolver-for-self-sovereign-identifiers-48e6b4a5cc3c) and this [webinar](https://ssimeetup.org/did-resolution-given-did-how-do-retrieve-document-markus-sabadello-webinar-13/) for an introduction.
 
-See https://dev.uniresolver.io/ for a DIF-hosted instance of the Universal Resolver that can be used for testing purposes. See [Docker Hub](https://hub.docker.com/u/universalresolver) for images.
+See [Docker Hub](https://hub.docker.com/r/rodopincha/uni-resolver-web) for images.
 
 ## Quick Start
 
 You can deploy the Universal Resolver on your local machine by cloning this Github repository, and using `docker-compose` to build and run the Universal Resolver as well as its drivers.
 
-	git clone https://github.com/decentralized-identity/universal-resolver
+	git clone https://github.com/rodolfomiranda/universal-resolver
 	cd universal-resolver/
 	docker-compose -f docker-compose.yml pull
 	docker-compose -f docker-compose.yml up
 
 You should then be able to resolve identifiers locally using simple `curl` requests as follows:
 
+	curl -X GET http://localhost:8080/1.0/identifiers/did:ada:EiDfLfmqWKLEgbALdWg2jj3m8LFbfFSwPdee6JvFE5VfTQ
 	curl -X GET http://localhost:8080/1.0/identifiers/did:sov:WRfXPg8dantKVubE3HX8pw
 	curl -X GET http://localhost:8080/1.0/identifiers/did:btcr:xz35-jznz-q6mr-7q6
 	curl -X GET http://localhost:8080/1.0/identifiers/did:v1:test:nym:z6Mkmpe2DyE4NsDiAb58d75hpi1BjqbH6wYMschUkjWDEEuR
@@ -125,6 +128,8 @@ Are you developing a DID method and Universal Resolver driver? Click [Driver Dev
 | [did-moncon](https://github.com/LedgerProject/moncon) | 0.4 | [0.3](https://github.com/LedgerProject/moncon) | [camicasii/didresolver-g](https://hub.docker.com/r/camicasii/didresolver-g) |
 | [did-dock](https://github.com/docknetwork/dock-did-driver) | 1.0.0 | [1.0 WD](https://w3c.github.io/did-core/) | [0.1](https://github.com/docknetwork/dock-did-driver/blob/master/Dock%20DID%20method%20specification.md) | [docknetwork/dock-did-driver](https://hub.docker.com/r/docknetwork/dock-did-driver) |
 | [did-mydata](https://github.com/decentralised-dataexchange/mydata-did-driver) | 1.0 | [1.1 WD](https://github.com/decentralised-dataexchange/automated-data-agreements/blob/main/docs/did-spec.md) | [igrantio/uni-resolver-driver-did-mydata](https://hub.docker.com/repository/docker/igrantio/uni-resolver-driver-did-mydata) | [iGrant.io](https://igrant.io/) |
+| [did-ada](https://github.com/rodolfomiranda/sidetree-cardano) | 1.0 | [1.0](https://github.com/rodolfomiranda/uni-resolver-driver-did-ada) | [rodopincha/uni-resolver-driver-did-ada](https://hub.docker.com/r/rodopincha/uni-resolver-driver-did-ada) | Sidetree implementation on top of Cardano
+
 
 
 

@@ -6,7 +6,7 @@ networks:
 
 services:
   uni-resolver-web:
-    image: universalresolver/uni-resolver-web:latest
+    image: rodopincha/uni-resolver-web:latest
     ports:
       - "8080:8080"
   driver-did-btcr:
@@ -188,3 +188,7 @@ services:
     image: igrantio/uni-resolver-driver-did-mydata:1.0
     ports:
       - "8126:8080"
+  driver-did-ada:
+    image: rodopincha/uni-resolver-driver-did-ada:latest
+    ports:
+      - "8127:8080"

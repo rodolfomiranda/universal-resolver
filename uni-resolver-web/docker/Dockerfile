@@ -1,7 +1,6 @@
-# Dockerfile for universalresolver/uni-resolver-web
+# Dockerfile for rodopincha/uni-resolver-web
 
 FROM maven:3-jdk-11 AS build
-MAINTAINER Markus Sabadello <markus@danubetech.com>
 
 # build uni-resolver-web
 
@@ -17,7 +16,6 @@ RUN cd /opt/universal-resolver/uni-resolver-web && mvn clean install package -N
 # build image
 
 FROM jetty:9.4-jre11
-MAINTAINER Markus Sabadello <markus@danubetech.com>
 
 COPY --from=build /opt/universal-resolver/uni-resolver-web/target/*.war /var/lib/jetty/webapps/ROOT.war
 COPY --from=build /opt/universal-resolver/uni-resolver-web/config.json /var/lib/jetty/
