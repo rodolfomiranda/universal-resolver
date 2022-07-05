@@ -223,5 +223,11 @@
 			"url": "http://driver-did-ada:8080/1.0/identifiers/$1",
 			"testIdentifiers": [ "did:ada:EiDfLfmqWKLEgbALdWg2jj3m8LFbfFSwPdee6JvFE5VfTQ" ]
 		}
+		,
+		{
+			"pattern": "^(did:prism:.+)$",
+			"url": "http://driver-did-prism:8080/1.0/identifiers/$1",
+			"testIdentifiers": [ "did:prism:db47e78dd57d2043a7a704fbd9d186a586682110a2097ac06dbc83b35602f290" ]
+		}
 	]
 }

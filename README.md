@@ -1,7 +1,7 @@
 ![DIF Logo](https://raw.githubusercontent.com/decentralized-identity/universal-resolver/master/docs/logo-dif.png)
 
 ### **Important note:**
-**This repository is a fork from [DIF Universal Resolver](https://github.com/decentralized-identity/universal-resolver). It deploys the Universal Resolver with all oficial did methods drivers plus [Sidetree-Cardano](https://github.com/rodolfomiranda/uni-resolver-driver-did-ada)  did:ada method driver that was not yet published by the Decentralized Identity Foundation.**
+**This repository is a fork from [DIF Universal Resolver](https://github.com/decentralized-identity/universal-resolver). It deploys the Universal Resolver with all oficial did methods drivers plus [Sidetree-Cardano](https://github.com/rodolfomiranda/uni-resolver-driver-did-ada)  did:ada method driver and [Atala PRISM](https://atalaprism.io) did:prism method driver that were not yet published by the Decentralized Identity Foundation.**
 # Universal Resolver
 
 The Universal Resolver resolves Decentralized Identifiers (DIDs) across many different DID methods, based on the [W3C DID Core 1.0](https://www.w3.org/TR/did-core/) and [DID Resolution](https://w3c-ccg.github.io/did-resolution/) specifications. It is a work item of the [DIF Identifiers&Discovery Working Group](https://github.com/decentralized-identity/identifiers-discovery/).
@@ -21,6 +21,7 @@ You can deploy the Universal Resolver on your local machine by cloning this Gith
 
 You should then be able to resolve identifiers locally using simple `curl` requests as follows:
 
+	curl -X GET http://localhost:8080/1.0/identifiers/did:prism:db47e78dd57d2043a7a704fbd9d186a586682110a2097ac06dbc83b35602f290
 	curl -X GET http://localhost:8080/1.0/identifiers/did:ada:EiDfLfmqWKLEgbALdWg2jj3m8LFbfFSwPdee6JvFE5VfTQ
 	curl -X GET http://localhost:8080/1.0/identifiers/did:sov:WRfXPg8dantKVubE3HX8pw
 	curl -X GET http://localhost:8080/1.0/identifiers/did:btcr:xz35-jznz-q6mr-7q6

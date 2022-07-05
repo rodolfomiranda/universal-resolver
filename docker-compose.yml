@@ -192,3 +192,7 @@ services:
     image: rodopincha/uni-resolver-driver-did-ada:latest
     ports:
       - "8127:8080"
+    driver-did-prism:
+    image: rodopincha/uni-resolver-driver-did-prism:latest
+    ports:
+      - "8128:8080"
