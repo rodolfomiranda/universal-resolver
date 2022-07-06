@@ -222,8 +222,7 @@
 			"pattern": "^(did:ada:.+)$",
 			"url": "http://driver-did-ada:8080/1.0/identifiers/$1",
 			"testIdentifiers": [ "did:ada:EiDfLfmqWKLEgbALdWg2jj3m8LFbfFSwPdee6JvFE5VfTQ" ]
-		}
-		,
+		},
 		{
 			"pattern": "^(did:prism:.+)$",
 			"url": "http://driver-did-prism:8080/1.0/identifiers/$1",
